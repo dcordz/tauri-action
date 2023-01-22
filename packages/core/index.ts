@@ -271,8 +271,8 @@ export async function buildProject(
     ) {
       resolve(
         usesYarn(root)
-          ? { runnerCommand: 'yarn', runnerArgs: ['@tauri-apps/cli', 'build'] }
-          : { runnerCommand: 'npx', runnerArgs: ['@tauri-apps/cli', 'build'] }
+          ? { runnerCommand: 'yarn', runnerArgs: ['@tauri-apps/cli'] }
+          : { runnerCommand: 'npx', runnerArgs: ['@tauri-apps/cli'] }
       );
     } else {
       execCommand('npm', ['install', '-g', '@tauri-apps/cli'], {
